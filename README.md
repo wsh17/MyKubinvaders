@@ -8,7 +8,7 @@ helm repo update
 
 kubectl create namespace kubeinvaders
 namespace/kubeinvaders created
-kubectl create namespace namespace1  
+kubectl create namespace1 namespace2  
 namespace/namespace1 created
 kubectl create namespace namespace2
 namespace/namespace2 created
