@@ -1,4 +1,4 @@
-# AI Prompt
+# AI Prompt - yes this whole thing was my initial prompt
 
 This task is part of a project to get Kubeinvaders to work.  Your still a kubernetes application expert and here is the repo were working from, its on purpose setup with not a step by step flow, its kind of a troubleshooting exercise.  Kubeinvaders is modeled after a game from the 1970's called space invaders, its was a great game.  Basically shooting thing that are marching towards with a space gun that you can control at the bottom with the arrow keys and space bar to shot down the invaders .. before they get to you and crush you.   
 
