@@ -9,7 +9,7 @@
 
 #### Next lets create the rbac permissions and kubeinvaders namespace using kubeinvaders-rbac.yaml, You will need to grap this file from this repo.
 
-3. `kubectl apply -f kubeinvaders-rbak.yaml`
+3. `kubectl apply -f kubeinvaders-rbac.yaml`
 
 #### Next we will re-create the secret in the kubeinvaders namespace for 8 hours, change the value to 8760h for 1 year
 
