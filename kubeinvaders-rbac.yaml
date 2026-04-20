@@ -1,0 +1,90 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kubeinvaders
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: kinv-cr
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - pods
+      - pods/log
+    verbs:
+      - delete
+  - apiGroups:
+      - batch
+      - extensions
+    resources:
+      - jobs
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+      - update
+      - patch
+      - delete
+  - apiGroups:
+      - "*"
+    resources:
+      - "*"
+    verbs:
+      - get
+      - watch
+      - list
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: kinv-sa
+  namespace: kubeinvaders
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: kinv-crb
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: kinv-cr
+subjects:
+  - kind: ServiceAccount
+    name: kinv-sa
+    namespace: kubeinvaders
+---
+apiVersion: v1
+kind: Secret
+type: kubernetes.io/service-account-token
+metadata:
+  name: kinv-sa-token
+  namespace: kubeinvaders
+  annotations:
+    kubernetes.io/service-account.name: kinv-sa
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  namespace: default
+  name: kubevirt-vm-restart-role
+rules:
+- apiGroups: ["subresources.kubevirt.io"]
+  resources: ["virtualmachines/restart"]
+  verbs: ["update"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: kubevirt-vm-restart-binding
+  namespace: default
+subjects:
+- kind: ServiceAccount
+  name: kubeinvaders
+  namespace: kubeinvaders
+roleRef:
+  kind: ClusterRole
+  name: kubevirt-vm-restart-role
+  apiGroup: rbac.authorization.k8s.io
