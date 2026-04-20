@@ -26,9 +26,9 @@
 
 #### Next we will use helm to deploy the kubeinvaders application into the kubinvaders namespace
 
-7. helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
+9. helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
 
 #### Finially we will portforward the application to our local hosts on port 8080
 
-kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
+10. kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
 
