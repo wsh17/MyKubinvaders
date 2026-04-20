@@ -2,6 +2,8 @@
 
 Steps to deploy Kubeinvaders
 
+First lets get the helm charts and update them
+
 helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/
 helm repo update
 
