@@ -5,7 +5,7 @@
 #### First lets get the helm charts and update them
 
 1. `helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/`
-2. helm repo update
+2. `helm repo update`
 
 #### Next lets create the rbac permissions and kubeinvaders namespace using kubeinvaders-rbac.yaml
 
