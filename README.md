@@ -17,9 +17,9 @@
 
 #### Next we will create namespace1 and namespace2 for the nginx pods that are the aliens to shoot down
 
-5. kubectl create namespace namespace2  
+5. kubectl create namespace namespace1 
  `namespace/namespace1 created`
-5. kubectl create namespace namespace2
+5. kubectl create namespace namespace2 
  `namespace/namespace2 created`
 
 helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="localhost" -n kubeinvaders
