@@ -21,12 +21,14 @@
  `namespace/namespace1 created`
 6. kubectl create namespace namespace2 <br>
  `namespace/namespace2 created`
+7. kubectl apply -f kubeinvaders-ns1.yaml
+8. kubectl apply -f kubeinvaders-ns2.yaml
 
 #### Next we will use helm to deploy the kubeinvaders application into the kubinvaders namespace
 
 7. helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
 
-#### finially we will portforward the application to our local hosts on port 8080
+#### Finially we will portforward the application to our local hosts on port 8080
 
 kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
 
