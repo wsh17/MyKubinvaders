@@ -17,14 +17,16 @@
 
 #### Next we will create namespace1 and namespace2 for the nginx pods that are the aliens to shoot down
 
-5. kubectl create namespace namespace1
+5. kubectl create namespace namespace1 <br>
  `namespace/namespace1 created`
-5. kubectl create namespace namespace2 
+6. kubectl create namespace namespace2 <br>
  `namespace/namespace2 created`
 
-helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="localhost" -n kubeinvaders
-helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
+#### Next we will use helm to deploy the kubeinvaders application into the kubinvaders namespace
 
+7. helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
+
+#### finially we will portforward the application to our local hosts on port 8080
 
 kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
 
