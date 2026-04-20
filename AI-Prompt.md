@@ -29,4 +29,6 @@ kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
 
 now that we have the UI running and the shooter gun at the bottom shooting, we need to figure out the other steps to get the invaders to fly around and allows us to shoot them.  They are nginx pods, but how do we deploy then and have them go back and fourth like the origional space invaders did.  Please take a look and give us some advice how how to do this, thanks. 
 
+As it turns out, see the README.md for step by step instructions.  Above AI was wrong, for `--set route_host="localhost"` needed to be `--set route_host="http://localhost:8080`
+
 
