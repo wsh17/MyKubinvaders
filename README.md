@@ -1,12 +1,19 @@
 # MyKubinvaders
 
-Steps to deploy Kubeinvaders
+## H2 Steps to deploy Kubeinvaders
 
-First lets get the helm charts and update them
+## H2 First lets get the helm charts and update them
 
-helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/
-helm repo update
+1. helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/
+2. helm repo update
 
+## Next lets create the rbac permissions and kubeinvaders namespace using kubeinvaders-rbac.yaml
+
+3. kubectl apply -f kubeinvaders-rbak.yaml
+
+## Next we will re-create the secret in the kubeinvaders namespace for 8 hours, change the value to 8760h for 1 year
+
+4. kubectl create token kinv-sa -n kubeinvaders --duration=8h
 
 kubectl create namespace kubeinvaders
 namespace/kubeinvaders created
