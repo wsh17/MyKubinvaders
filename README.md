@@ -14,6 +14,8 @@ kubectl create namespace namespace2
 namespace/namespace2 created
 
 helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="localhost" -n kubeinvaders
+helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
+
 
 kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
 
