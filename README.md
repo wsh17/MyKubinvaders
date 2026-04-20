@@ -1,4 +1,4 @@
-# MyKubinvaders
+# MyKubinvaders Steps to Deploy on kubernetes, in our case were using docker-desktop locally and the kubernetes option
 
 ### Steps to deploy Kubeinvaders from ```https://github.com/lucky-sideburn/kubeinvaders/```. 
 
