@@ -38,3 +38,4 @@
 
 11. `kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders`
 
+#### Last ste is to hit http://localhost:8080 with your browser to see and play with kubinvaders, enjoy ... 
