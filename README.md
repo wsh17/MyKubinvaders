@@ -2,7 +2,7 @@
 
 ### Steps to deploy Kubeinvaders from ```https://github.com/lucky-sideburn/kubeinvaders/```. 
 
-#### First lets get the helm charts and update them
+#### First lets get the helm charts and set the repo and also update them to the most current
 
 1. `helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/`
   
