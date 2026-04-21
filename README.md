@@ -8,7 +8,7 @@
   
 2. `helm repo update`
 
-#### Next lets create the rbac permissions and kubeinvaders namespace using kubeinvaders-rbac.yaml, You will need to grap this file from this repo.
+#### Next lets create the rbac permissions and kubeinvaders namespace using kubeinvaders-rbac.yaml, You will need to grap the file from this repo or from the origional repo, this file was not altered from the main repo. 
 
 3. `kubectl apply -f kubeinvaders-rbac.yaml`
 
