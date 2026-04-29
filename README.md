@@ -16,7 +16,7 @@
 
 4. `kubectl create token kinv-sa -n kubeinvaders --duration=8h`
 
-#### Next we will create namespace1 and namespace2 for the nginx pods that are the aliens to shoot down.  You will need to grap the files from this repo to create the nginx pods, also you can increase the number of pods by changing the replicas to a larger number, today they are set at 10 replicas. 
+#### Next we will create namespace1 and namespace2 for the nginx pods that are the aliens to shoot down.  You will need to grap the files from this repo to create the nginx pods, also you can increase the number of pods by changing the replicas to a larger number, today they are set at 10 replicas. Note you might have to pull nginx manually with docker if you get an image pull error, `docker pull nginx:latest
 
 5. `kubectl create namespace namespace1` <br>
 
