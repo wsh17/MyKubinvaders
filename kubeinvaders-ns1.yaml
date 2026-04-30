@@ -1,8 +1,13 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: namespace1
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: namespace1  # Change to namespace2 for the other file
+  namespace: namespace1
   labels:
     app: nginx
 spec:
