@@ -21,10 +21,9 @@
    kubectl create token kinv-sa -n kubeinvaders --duration=8760h
 
 #### Next we will create namespace1 and namespace2 for the nginx pods that are the aliens to shoot down and also 20 pods in each namespace.  You will need to grab the files from my repo to create the namespaces (namespace1 and namespace2) and nginx pods, Note you might have to pull nginx manually with docker if you get an image pull error (with kubectl) which happens on a Mac due to security, the work around is to just pull the image to docker first using this command below and then kubectl will use that image rather than trying to pull it. 
+
 ```bash
 docker pull nginx:latest
-
-and then kubectl will pull from there for its use. 
 
 5. ```bash
    kubectl create namespace namespace1
