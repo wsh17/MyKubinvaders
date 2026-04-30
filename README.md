@@ -20,7 +20,7 @@
 3. ```bash
    kubectl apply -f kubeinvaders-rbac.yaml
 
-#### Next we will re-create the secret in the kubeinvaders namespace for for 1 year, using 8760h which is 1 year thanks to *Dr Drew Osborn* for this. 
+#### Next we will re-create the secret in the kubeinvaders namespace for for 1 year, using 8760h which is 1 year thanks to *Dr Drew Osborn* for this great tip. 
 
 4. ```bash
    kubectl create token kinv-sa -n kubeinvaders --duration=8760h
