@@ -52,7 +52,7 @@
 1. ```bash
    helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/
   
-3. ```bash
+2. ```bash
    helm repo update
 
 #### Next lets create the rbac permissions and kubeinvaders namespace using kubeinvaders-rbac.yaml, You will need to grap the file from this repo or from the origional repo, this file was not altered from the main repo. 
@@ -70,11 +70,23 @@
 5. ```bash
    kubectl apply -f kubeinvaders-ns1.yaml
    
-7. ```bash
+6. ```bash
    kubectl apply -f kubeinvaders-ns2.yaml
 
 #### Next we will use helm to deploy the kubeinvaders application into the kubinvaders namespace.  Notice were hardcoding http in the command otherwise most browsers will attempt to use https on port 443.
 
 7. ```bash
    helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
+
+#### Now we need a new terminal window and will ssh into the ec2 instance a special way, so that the port-forward command comes back to you local laptop under http://localhost:8080 
+
+8. ```bash
+   ssh -i <your_ssh_pem_key>.pem -L 8080:localhost:8080 ec2-user@<aws_dns_host-or-IP>
+
+#### Now from that terminal we will do the port-forward command which will forward back to you local laptop
+
+9. ```
+   kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
+
+#### Last step is to hit http://localhost:8080 with your browser on your local laptop to see and play with kubinvaders, enjoy ... 
 
