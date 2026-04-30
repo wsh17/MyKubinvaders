@@ -1,5 +1,5 @@
 ## MyKubinvaders Steps 
-### Steps to Deploy kubeinvaders on docker-desktop locally and minikube on ec2 instance
+### Steps to Deploy kubeinvaders on docker-desktop locally and using minikube on ec2 instance
 #### Author Bill Harper
 
 ---
