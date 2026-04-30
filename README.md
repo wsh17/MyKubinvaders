@@ -1,4 +1,5 @@
-## MyKubinvaders - Steps to Deploy kubeinvaders on docker-desktop locally and minikube on ec2 instance
+## MyKubinvaders 
+### Steps to Deploy kubeinvaders on docker-desktop locally and minikube on ec2 instance
 ## Deploy on docker-desktop on a MAC
 
 ### Steps to deploy Kubeinvaders from `https://github.com/lucky-sideburn/kubeinvaders/` repo with a few tweaks by me to get it working properly.
@@ -40,3 +41,7 @@
    kubectl port-forward svc/kubeinvaders 8080:80 -n kubeinvaders
 
 #### Last step is to hit http://localhost:8080 with your browser to see and play with kubinvaders, enjoy ... 
+
+## Deploy on minikube on ec2 instance
+
+
