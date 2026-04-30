@@ -1,4 +1,4 @@
-## MyKubinvaders - Steps to Deploy kubeinvaders
+## MyKubinvaders - Steps to Deploy kubeinvaders on docker-desktop locally and minikube on ec2 instance
 ## Deploy on docker-desktop on a MAC
 
 ### Steps to deploy Kubeinvaders from `https://github.com/lucky-sideburn/kubeinvaders/` repo with a few tweaks by me to get it working properly.
