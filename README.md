@@ -1,6 +1,6 @@
 ## MyKubinvaders - Steps to Deploy kubeinvaders on kubernetes, in our case were using docker-desktop locally and the kubernetes option within docker-desktop
 
-### Steps to deploy Kubeinvaders from `https://github.com/lucky-sideburn/kubeinvaders/` repo with a few tweaks to get it working.
+### Steps to deploy Kubeinvaders from `https://github.com/lucky-sideburn/kubeinvaders/` repo with a few tweaks by me to get it working properly.
 
 #### First lets get the helm charts and set the repo and also update them to the most current version
 
