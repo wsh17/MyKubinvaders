@@ -1,4 +1,4 @@
-## MyKubinvaders - Steps to Deploy kubeinvaders on kubernetes, in our case were using docker-desktop locally and the kubernetes option within docker-desktop
+## MyKubinvaders - Steps to Deploy kubeinvaders on docker-desktop kubernetes locally on a MAC.
 
 ### Steps to deploy Kubeinvaders from `https://github.com/lucky-sideburn/kubeinvaders/` repo with a few tweaks by me to get it working properly.
 
