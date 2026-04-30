@@ -5,7 +5,7 @@
 #### First lets get the helm charts and set the repo and also update them to the most current
 
 1. ```bash
-   helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/```
+   helm repo add kubeinvaders https://lucky-sideburn.github.io/helm-charts/
   
 3. ```helm repo update```
 
