@@ -43,6 +43,8 @@
 
 #### Last step is to hit http://localhost:8080 with your browser to see and play with kubinvaders, enjoy ... 
 
+---
+
 ## Deploy on minikube on ec2 instance
 
 #### First lets get the helm charts and set the repo and also update them to the most current version
