@@ -20,7 +20,7 @@
 3. ```bash
    kubectl apply -f kubeinvaders-rbac.yaml
 
-#### Next we will re-create the secret in the kubeinvaders namespace for for 1 year, using 8760h which is 1 year thanks to Dr Drew Osborn for this. 
+#### Next we will re-create the secret in the kubeinvaders namespace for for 1 year, using 8760h which is 1 year thanks to *Dr Drew Osborn* for this. 
 
 4. ```bash
    kubectl create token kinv-sa -n kubeinvaders --duration=8760h
@@ -80,7 +80,7 @@
 7. ```bash
    helm install kubeinvaders kubeinvaders/kubeinvaders --set-string config.target_namespace="namespace1\,namespace2" --set route_host="http://localhost:8080" -n kubeinvaders
 
-#### Now we need a new terminal window and will ssh into the ec2 instance a special way, so that the port-forward command comes back to you local laptop under http://localhost:8080 
+#### Now we need a new terminal window and will ssh into the ec2 instance a special way, so that the port-forward command comes back to you local laptop under http://localhost:8080, thanks to *Dr Kelvin Miller* for this command
 
 8. ```bash
    ssh -i <your_ssh_pem_key>.pem -L 8080:localhost:8080 ec2-user@<aws_dns_host-or-IP>
